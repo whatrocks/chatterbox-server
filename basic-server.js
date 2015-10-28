@@ -22,11 +22,11 @@ app.get('/', function(req, res) {
   res.sendfile(__dirname + '/client/index.html');
 });
 
-app.get('/', function(req, res) {
+app.get('/cloud-mouth', function(req, res) {
 	res.send(storage);
 });
 
-app.post('/', function(req, res){
+app.post('/cloud-mouth', function(req, res){
 	req.body.objectId = ++objectId;
 	req.body.createdAt = Date.now();
   console.log("req.body", req.body);
