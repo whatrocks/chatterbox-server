@@ -29,8 +29,6 @@ app.get('/cloud-mouth', function(req, res) {
 app.post('/cloud-mouth', function(req, res){
 	req.body.objectId = ++objectId;
 	req.body.createdAt = Date.now();
-  console.log("req.body", req.body);
-	storage.results.push(req.body);
-	console.log("storage", storage);
+	storage.results.unshift(req.body);
 	res.send('got a POST request');
 });
