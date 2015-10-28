@@ -4,7 +4,8 @@
   "description": "Yell with friends",
   "main": "basic-server.js",
   "scripts": {
-    "start": "node basic-server.js"
+    "start": "node basic-server.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
