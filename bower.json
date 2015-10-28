@@ -1,6 +1,6 @@
 {
-  "name": "chatterbox",
-  "version": "0.0.0",
+  "name": "cloud-mouth",
+  "version": "1.0.0",
   "dependencies": {
     "backbone": "~1.1.2",
     "underscore": "~1.8.3",
