@@ -1,8 +1,8 @@
 /* Import node's http module: */
 var express = require("express");
 var cors = require('cors');
-var app = express();
 var bodyParser = require('body-parser');
+var app = express();
 
 var storage = {results: []}; 
 var objectId = 0;
@@ -29,7 +29,8 @@ app.get('/cloudmouth', function(req, res) {
 app.post('/cloudmouth', function(req, res){
 	req.body.objectId = ++objectId;
 	req.body.createdAt = Date.now();
+  console.log("req.body", req.body);
 	storage.results.push(req.body);
-	console.log(storage.results);
+	console.log("storage", storage);
 	res.send('got a POST request');
 });
